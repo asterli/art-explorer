@@ -1,0 +1,88 @@
+/* Skeleton loader */
+.skeleton {
+  background: linear-gradient(90deg, #e8e8e8 25%, #d0d0d0 50%, #e8e8e8 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+.skeleton-text {
+  height: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.skeleton-text.w-75 { width: 75%; }
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Artwork cards */
+.artwork-card {
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.artwork-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Favorites remove button — hidden until card is hovered */
+.fav-card .remove-fav-btn {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.fav-card:hover .remove-fav-btn {
+  opacity: 1;
+}
+
+/* Source badge colours are handled inline via Bootstrap classes */
+
+/* Tab content */
+.tab-content {
+  min-height: 300px;
+}
+#tabOverview.show.active {
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+}
+
+/* Detail image */
+#artworkPanel img {
+  width: 100%;
+  object-fit: contain;
+  background: #f8f8f8;
+  border-radius: 6px;
+}
+@media (max-width: 767px) {
+  #artworkPanel img {
+    max-height: 220px;
+  }
+}
+
+/* Related works grid images */
+#tabRelated .card-img-top {
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Leaflet map container */
+#map {
+  border-radius: 6px;
+}
+
+/* Cursor-following tooltip for related works */
+#relatedTooltip {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  pointer-events: none;
+  max-width: 200px;
+  z-index: 9999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

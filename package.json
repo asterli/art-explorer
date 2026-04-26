@@ -1,0 +1,14 @@
+{
+  "name": "art-explorer",
+  "version": "1.0.0",
+  "description": "Art Collection Explorer with Favorites",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "node-fetch": "^2.7.0"
+  }
+}
